@@ -12,11 +12,14 @@ def prime(n):
 
 
 max_number = 100
-for i in range(3, max_number, 1): 
+for i in range(3, max_number, 1):
     if prime(i):
-        if (i+1) % 6 == 0:
-            if prime(i+2):
-                print(str(i), " + " + str(i+2), " may be twin primes")
+        if prime(i+2):
+            print(str(i), " + " + str(i + 2), " are twin primes", end=" ")
+            if (i+1) % 6 == 0:
+                print("mid num % 6 is 0")
+            else:
+                print("mid number % 6 isnt 0")
 
 
 """
